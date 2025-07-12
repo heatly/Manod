@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Relay Control Dashboard</title>
+</head>
+<body>
+    <h2>ESP32 Dual Relay Control + NFT Certification (Monad)</h2>
+    <form action="/relay/relay1/on" method="get">
+        <button type="submit">Start Relay 1</button>
+    </form>
+    <form action="/relay/relay1/off" method="get">
+        <button type="submit">Stop Relay 1</button>
+    </form>
+    <form action="/relay/relay2/on" method="get">
+        <button type="submit">Start Relay 2</button>
+    </form>
+    <form action="/relay/relay2/off" method="get">
+        <button type="submit">Stop Relay 2</button>
+    </form>
+
+    {% if status %}
+        <p><strong>Status:</strong> {{ status }}</p>
+    {% endif %}
+</body>
+</html>
